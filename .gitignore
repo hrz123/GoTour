@@ -32,3 +32,5 @@ site/
 
 # pytest
 .pytest_cache/
+
+.DS_store
