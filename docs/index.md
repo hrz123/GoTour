@@ -1,6 +1,6 @@
 # [Go Tour Go 短视频教程](https://hrz123.github.io/GoTour/)
 
-![](./golang.png)
+![img](./golang.png)
 
 ## 目的
 
