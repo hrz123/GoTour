@@ -34,3 +34,5 @@ site/
 .pytest_cache/
 
 .DS_store
+
+venv/
