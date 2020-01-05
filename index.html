@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="img/favicon.ico">
-  <title>简介 - Go Tour go教程</title>
+  <title>简介 - Let's Go! Golang 短视频教程</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/theme.css" type="text/css" />
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Go Tour go教程</a>
+        <a href="." class="icon icon-home"> Let's Go! Golang 短视频教程</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -53,7 +53,7 @@
     <a class="current" href=".">简介</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#go-tour-go">Go Tour Go 短视频教程</a></li>
+    <li class="toctree-l2"><a href="#golang">Golang 视频教程</a></li>
     
         <ul>
         
@@ -65,7 +65,11 @@
         
             <li><a class="toctree-l3" href="#_4">本电子书制作和写作方式</a></li>
         
-            <li><a class="toctree-l3" href="#_5">勘误</a></li>
+            <li><a class="toctree-l3" href="#b">B 站地址(连载中)</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">知乎专栏</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">勘误</a></li>
         
         </ul>
     
@@ -79,23 +83,23 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="basics/00_hello_go/hello_go.md">Hello Go!</a>
+    <a class="" href="basics/00_hello_go/hello_go/">Hello Go!</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="basics/01_go_basic_types/basic_types.md">Go 基础类型</a>
+    <a class="" href="basics/01_go_basic_types/basic_types/">Go 基础类型</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="basics/02_go_array_and_slice/array_and_slice.md">Go 数组和切片</a>
+    <a class="" href="basics/02_go_array_and_slice/array_and_slice/">Go 数组和切片</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="basics/03_map/map.md">Go 映射</a>
+    <a class="" href="basics/03_map/map/">Go 映射</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="basics/04_go_control_flow/go_procedural.md">Go 控制流语句</a>
+    <a class="" href="basics/04_go_control_flow/go_procedural/">Go 控制流语句</a>
                 </li>
     </ul>
 	    </li>
@@ -110,7 +114,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Go Tour go教程</a>
+        <a href=".">Let's Go! Golang 短视频教程</a>
       </nav>
 
       
@@ -132,68 +136,77 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="go-tour-go"><a href="https://hrz123.github.io/GoTour/">Go Tour Go 短视频教程</a></h1>
+                <h1 id="golang"><a href="https://hrz123.github.io/GoTour/">Golang 视频教程</a></h1>
 <p><img alt="img" src="golang.png" /></p>
 <h2 id="_1">目的</h2>
-<p>通过短视频和文章的形式帮助有一定其他语言编程基础的人快速学习和入门Go。内容包括Go基础、内置库、web开发、并发编程等，均来自笔者日常学习和开发经验总结。教程中会有一些和Python等语言特性的对比，方便读者理解。希望教程有如下特色：</p>
+<p>通过连载短视频和文章的形式帮助有一定其他语言编程基础的人快速学习和入门 Golang。
+内容包括 Golang 基础、内置库、web 开发、并发编程等，均来自笔者日常学习和开发经验总结。
+教程中会有一些和 Python 等语言特性的对比，方便读者理解。希望教程有如下特色：</p>
 <ul>
-<li>每一小节均包含视频和文章，演示笔者入场开发的工作流（当然未必是最佳实践，读者朋友可以分享下自己的开发经验）</li>
-<li>全部代码视频中现场编写，避免教科书式的枯燥讲解代码</li>
+<li>每一小节均包含视频和文章，演示笔者日常开发的工作流（当然未必是最佳方式，读者朋友可以分享下自己的开发经验）</li>
+<li>全部代码视频中现场编写，避免教科书式枯燥讲解代码</li>
 <li>主次分明，快速上手，主要分享日常业务开发中最常用的特性</li>
-<li>结合实战，笔者自己边踩坑边总结业务开发中遇到一些痛点和解决方案。比如如何做单测、代码如何分层、如何排查性能问题等</li>
-<li>最佳实践。总结业务开发中一些好的实践，分享出来
-主要面向有一定开发经验的开发者，不会涉及到一些非常具体和细节的问题。比如如何下载IDE，如何导出环境变量等，编程新手可以先补一补开发基础。本小书会涉及到以下内容，将会长期不间断更新文章和小视频（除非笔者又换工作学习别的技术栈了）：</li>
-<li>go基础：快速上手了解go语法基础并上手开发。go语法简介，没有那么多语法糖，比其他语言更容易上手，尤其是学过c语言</li>
-<li>go内置库：熟悉常见内置库的使用方式，增加开发效率</li>
-<li>go踩坑：笔者日常使用过程中碰到的一些坑，或者一些新手经常会犯的错误，防止大家踩坑</li>
-<li>go web开发：包含常用的go内置http包，go web框架，web开发常用的第三方库（http/mysql/redis/kafka等）</li>
-<li>go最佳实践：比如代码组织，单元测试，性能测试，工程实践等</li>
-<li>go高级特性：go的一些高级语法特性</li>
-<li>go并发编程：go的一大卖点，学习如何实现高性能网络后端</li>
-<li>开发工作流：（vim/tmux等）。当然只是笔者自己的工作流，笔者一般会向周围的同事学习更高效的方式，你也可以留言你觉得更好的开发方式。</li>
+<li>结合实战，笔者自己边踩坑边总结业务开发中遇到的一些痛点和解决方案。比如如何做单测、代码如何分层、如何排查性能问题等</li>
+<li>最佳实践。总结业务开发中一些好的实践分享出来，贴地气</li>
+</ul>
+<p>主要面向有一定开发经验的开发者，不会涉及到一些非常具体和细节的问题。 比如如何下载 IDE，如何导出环境变量等，
+编程新手可以先补一补开发基础。本小书会涉及到以下内容，将会长期不间断更新文章和小视频（除非笔者又换工作学习别的技术栈了）:</p>
+<ul>
+<li>go 基础: 快速上手了解 golang 语法基础并上手开发。go 语法简洁，没有那么多语法糖，比其他语言更容易上手，尤其是学过c语言</li>
+<li>go 内置库：熟悉常见内置库的使用方式，增加开发效率</li>
+<li>go 踩坑: 笔者日常使用过程中碰到的一些坑，或者一些新手经常会犯的错误，防止大家踩坑</li>
+<li>go web 开发：包含常用的 go web 框架，web 开发常用的第三方库(http/mysql/redis/kafka等)</li>
+<li>go 最佳实践: 比如代码组织，单元测试，性能测试，工程实践等</li>
+<li>go 高级特性: go 的一些高级语法特性</li>
+<li>go 并发编程: go 的一大卖点，学习如何实现高性能网络后端</li>
+<li>开发工作流(vim/tmux等)。当然只是笔者自己的工作流，笔者一般会向周围的同事学习更高效的方式，你也可以留言你觉得更好的开发方式。</li>
 </ul>
 <p>您可以在以下地址阅读：</p>
 <ul>
-<li>阅读地址：<a href="https://hrz123.github.io/GoTour/">https://hrz123.github.io/GoTour/</a></li>
-<li>本项目地址：<a href="https://github.com/hrz123/GoTour">https://github.com/hrz123/GoTour</a></li>
+<li>阅读地址：<a href="https://hrz123.github.io/GoTour/"> https://hrz123.github.io/GoTour/ </a></li>
+<li>本项目地址：<a href="https://github.com/hrz123/GoTour"> https://github.com/hrz123/GoTour </a></li>
 </ul>
 <h2 id="_2">如何快速上手新语言</h2>
-<p>笔者的经验就是「学以致用」，如果光学不练，很快就会忘记。学一门新语言的最好方式就是在熟悉了基本语法以后，通过大量的编码和项目练习来熟悉它。期间你还需要频繁借助文档/搜索引擎等工具，边写边查，很快就可以上手。之后再去考虑一些具体的语法细节和深入的特性，</p>
-<p>新语法学习十步法，对于很多工程上使用的语言来说学习方式都比较类似：</p>
+<p>笔者的经验就是『学以致用』，如果光学不练，很快就会忘记。学一门新语言的最好方式就是在熟悉了基本语法以后，
+通过<strong>大量</strong>的编码和项目练习来熟悉它。期间你还需要频繁借助文档/搜索引擎等工具，边写边查，很快就可以上手。
+之后再去考虑一些具体的语言细节和深入的特性，</p>
+<p>新语言学习十步法，对于很多工程上使用的语言来说学习方式都比较类似：</p>
 <ul>
 <li>1.安装并且搭建开发环境</li>
-<li>2.基础类型和复合类型。基础数据类型（数值类型，字符串）和复合类型（map/set/list）</li>
+<li>2.基础类型和复合类型。基础数据类型(数值类型，字符串）和复合类型(map/set/list)</li>
 <li>3.过程式编程，控制流语句。判断、循环、选择</li>
 <li>4.如何使用函数。定义方式，传值和返回值。</li>
-<li>5.面向对象编程。类和实例，数据和方法，组合and集成，接口等概念</li>
+<li>5.面向对象编程。类和实例，数据和方法，组合and继承，接口等概念</li>
 <li>6.内置库（文件、网络、时间、日志等）</li>
-<li>7.找一个广泛使用的第三方库开始写（抄）项目，比如使用go的gin web框架重构你们的restful应用</li>
-<li>8.边写边查，大量练习。常用代码片段总结成文档。比如go里边各种转换，你可以建立一个代码仓库专门用来记录笔记和代码片段，在你开发的时候快速查阅会非常方便</li>
-<li>9.第三方库快速编写demo代码。从github搜索关键词。web框架/redis/mysql/kafka等第三方库</li>
-<li>10.最佳实践：遇到的坑；代码封层；单元测试；静态检查。分享与输出（费曼学习法）</li>
+<li>7.找一个广泛使用的第三方库开始写（抄）项目，比如使用 golang 的 gin web 框架重构你们的 restful 应用</li>
+<li>8.边写边查，大量练习。常用代码片段总结成文档。比如 golang 里边各种转换，你可以建立一个代码仓库专门用来记录笔记和代码片段，在你开发的时候快速查阅会非常方便</li>
+<li>9.第三方库快速编写 demo 代码。从 github 搜索关键词。web 框架/redis/mysql/kafka 等第三方库</li>
+<li>10.最佳实践：遇到的坑；代码分层；单元测试；静态检查。分享与输出（费曼学习法）</li>
 </ul>
 <p>总结起来就是：</p>
 <ul>
-<li>多写多练。光看书是学不会编程的，联系到手熟。书上的例子自己尝试编写和实现，千万不要只看不写</li>
+<li>多写多练。光看书是学不会编程的，练习到手熟。书上的例子自己尝试编写和实现，千万不要只看不写</li>
 <li>照葫芦画瓢，一开始学会模仿别人的写法。看源码，学习优秀的设计和写法</li>
-<li>做项目，总结，输出。巩固所学知识，技术分享和输出。费曼学习法，会加深理解的层次和记忆效果。</li>
+<li>做项目，总结，输出。巩固所学知识，技术分享和输出。费曼学习法，会加深的理解层次和记忆效果</li>
 </ul>
+<p><a href="https://www.bilibili.com/video/av79283035">学习一门新编程语言，真没那么难![视频]</a></p>
 <h2 id="_3">工具</h2>
-<p>笔者使用 when-changed 来监控文件变动并且执行go代码，这样你可以编写代码，保存后自动运行观察结果，在写代码验证你的想法的时候会比较方便，视频里笔者会详细演示。</p>
+<p>笔者使用 when-changed 来监控文件变动并且执行 go 代码，这样你可以边写代码，保存后自动运行观察结果，
+在写代码验证你的想法的时候会比较方便，视频里笔者会详细演示。</p>
 <pre><code class="sh">pip install when-changed
 # 监控当前文件夹变动并且执行命令
-when-changed -v -r -l -s ./ go run main.go
+when-changed -v -r -1 -s ./ go run main.go
 # 笔者喜欢自己 alias 一个快捷命令放到 zshrc/bashrc 里，比如
-alias go_monitor_run=&quot;when-changed -r -v -l . go run &quot;
+alias go_monitor_run=&quot;when-changed -r -v -1 . go run &quot;
 # 这样就可以直接执行如下命令，修改完之后自动执行代码看效果啦
 go_monitor_run main.go
 </code></pre>
 
 <h2 id="_4">本电子书制作和写作方式</h2>
 <p>使用 mkdocs 和 markdown 构建，使用 Python-Markdown-Math 完成数学公式。
-markdown 语法参考： <a href="http://xianbai.me/learn-md/article/about/readme.html">http://xianbai.me/learn-md/article/about/readme.html</a></p>
+markdown 语法参考：http://xianbai.me/learn-md/article/about/readme.html</p>
 <p>安装依赖：</p>
-<pre><code class="sh">pip install mkdocs  # 制作电子书，http://markdown-docs-zh.readthedocs.io/zh_CN/latest/
+<pre><code class="sh">pip install mkdocs    # 制作电子书, http://markdown-docs-zh.readthedocs.io/zh_CN/latest/
 # https://stackoverflow.com/questions/27882261/mkdocs-and-mathjax/31874157
 pip install https://github.com/mitya57/python-markdown-math/archive/master.zip
 
@@ -204,18 +217,41 @@ pip install -r requirements.txt
 </code></pre>
 
 <p>你可以 clone 本项目后在本地编写和查看电子书：</p>
-<pre><code class="sh">mkdocs serve        # 修改自动更新，浏览器打开 http://localhost:8000 访问
+<pre><code class="sh">mkdocs serve     # 修改自动更新，浏览器打开 http://localhost:8000 访问
 # 数学公式参考 https://www.zybuluo.com/codeep/note/163962
 mkdocs gh-deploy    # 部署到自己的 github pages
 </code></pre>
 
-<h2 id="_5">勘误</h2>
+<h2 id="b">B 站地址(连载中)</h2>
+<ul>
+<li><a href="https://www.bilibili.com/video/av79390466/">学Golang 涨工资系列，你的第一个 Golang 代码</a></li>
+<li><a href="https://www.bilibili.com/video/av80297008/">学 golang 涨工资系列，聊聊 Go 的基础类型</a></li>
+<li><a href="https://www.bilibili.com/video/av81161132/">学 golang 涨工资系列，快速入门 go 数组与切片</a></li>
+<li><a href="https://www.bilibili.com/video/av81161408/">学 golang涨工资系列，golang 映射</a></li>
+<li><a href="https://www.bilibili.com/video/av81651933/">学 golang 涨工资系列，go 流程控制</a></li>
+</ul>
+<h2 id="_5">知乎专栏</h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/97536473">学 Golang 涨工资系列，你的第一个 Go 程序[视频]</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/99034721">学 golang 涨工资系列，聊聊 Go 的基础类型</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/100512151">学Golang涨工资系列，Golang 数组和切片</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/100512341">学 Golang 涨工资系列，Go map映射</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/100618984">学 golang 涨工资系列，go 流程控制[视频]</a></li>
+</ul>
+<h2 id="_6">勘误</h2>
 <p>本系列均来自笔者日常学习和工作总结，疏漏之处在所难免，如果文章或者视频有误，您可以到本项目 github 仓库或者文章评论区指出，欢迎批评指正。
 笔者会认真对待并且修复错误。</p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="basics/00_hello_go/hello_go/" class="btn btn-neutral float-right" title="Hello Go!">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
@@ -240,6 +276,8 @@ mkdocs gh-deploy    # 部署到自己的 github pages
       
       
       
+        <span style="margin-left: 15px"><a href="basics/00_hello_go/hello_go/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
     </span>
 </div>
     <script>var base_url = '.';</script>
@@ -252,5 +290,5 @@ mkdocs gh-deploy    # 部署到自己的 github pages
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2020-01-03 06:27:42
+Build Date UTC : 2020-01-05 15:17:53
 -->

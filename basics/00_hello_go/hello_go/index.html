@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>Hello Go! - Let's Go! Golang 短视频教程</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hello Go!";
+    var mkdocs_page_input_path = "basics/00_hello_go/hello_go.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> Let's Go! Golang 短视频教程</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">简介</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Go基础</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Hello Go!</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#why-golang-go">Why Golang(后文均简称 Go) ?</a></li>
+    
+
+    <li class="toctree-l3"><a href="#golang">下载和安装 Golang</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_1">配置环境变量</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_2">开发工具</a></li>
+    
+
+    <li class="toctree-l3"><a href="#_3">善用工具</a></li>
+    
+
+    <li class="toctree-l3"><a href="#go">你的第一个 Go 程序</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#_4">练习</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../01_go_basic_types/basic_types/">Go 基础类型</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../02_go_array_and_slice/array_and_slice/">Go 数组和切片</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../03_map/map/">Go 映射</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../04_go_control_flow/go_procedural/">Go 控制流语句</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">Let's Go! Golang 短视频教程</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Go基础 &raquo;</li>
+        
+      
+    
+    <li>Hello Go!</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <blockquote>
+<p>Go is not meant to innovate programming theory. It’s meant to innovate programming practice. – Samuel Tesla</p>
+</blockquote>
+<h1 id="why-golang-go">Why Golang(后文均简称 Go) ?</h1>
+<p>不得不承认，从国内招聘信息和市场行情来说，这几年 Golang 作为互联网后端语言确实越来越火，很多互联网公司都开始使用它。</p>
+<p>说说个人感觉 Golang 的一些优缺点吧(号称 21 世纪的 C 语言):</p>
+<ul>
+<li>有个好爹(google)和一堆牛人开发维护</li>
+<li>性能高，并发友好，goroutine 支持</li>
+<li>工程友好，语法简洁，容易学习、上手和维护。Go 的语法特性相比其他语言来说更加简洁，只有25个关键词</li>
+<li>静态编译型语言，部署非常方便，只需要 build 一个二进制文件扔到服务器上</li>
+<li>国内互联网公司 golang 岗位日益增多，是高性能web后端、云服务、区块链等领域一门比较有前景的语言</li>
+</ul>
+<p>也有一些一直被人喷的地方(当然设计哲学不同人有不同看法）：</p>
+<ul>
+<li>错误检查，error check 比较原始。经常看到一堆 err check 代码夹杂在代码逻辑里</li>
+<li>暂时没有泛型，某些场景下比较繁琐</li>
+<li>生态不够完善等。Go 还是比较年轻的语言，生态相比一些发展较久的语言还想对欠缺</li>
+</ul>
+<p>总得来说，笔者感觉作为微服务后端语言来说，还是完全够用的。下图是 go 的关键词列表，只有 25 个：</p>
+<p><img alt="Golang 25 个关键词" src="../golang_keywords.jpg" /></p>
+<h1 id="golang">下载和安装 Golang</h1>
+<p>本系列不是针对编程新手的教程，如果你还无法访问相关网站，请自行解决。
+笔者还是依旧强烈建议你使用 Linux 操作系统来学习，因为互联网公司大多使用 linxu server。
+请到 golang 官网下载并且安装你的对应系统环境的安装包(go是跨平台的MacOS/Windows/Linux)</p>
+<ul>
+<li><a href="https://golang.org/"> https://golang.org/ </a></li>
+<li><a href="https://github.com/golang/go">https://github.com/golang/go </a></li>
+</ul>
+<p>当然如果你是使用 linux/macos 还可以用对应包管理器来安装。比如笔者使用 macos 的 <code>brew install</code> 就可以安装了。
+安装完成之后输入 <code>go version</code> 输出了 go 版本就安装完成，建议安装最新的版本就好，对于目前学习 go 来说版本影响不大。</p>
+<h1 id="_1">配置环境变量</h1>
+<p>go 需要配置环境变量指定其安装路径(GOROOT)和(GOPATH)，笔者在类 unix 系统下一般只需要配置一下 GOPATH 指定你的项目路径。
+比如加入如下配置到你的 <code>.bashrc</code> 或者 <code>.zshrc</code> 里边。
+这里比如我在我的用户根目录建立一个名字为 go 的文件夹存放我的 go 代码。</p>
+<pre><code class="sh">export GOPATH=$HOME/go        # don't forget to change your path correctly!
+export PATH=$PATH:$GOPATH/bin
+</code></pre>
+
+<p>之后重启终端或者 source 一下你改的 rc 文件就可以了。 到这里如果安装完成并且配置好了环境变量就可以开始编写代码了。</p>
+<h1 id="_2">开发工具</h1>
+<p>笔者视频中将使用 neovim(vim-go插件)/tmux 等工具来进行开发演示，主要是因为笔者比较熟悉，而不一定是最好用的。
+笔者建议你挑选一个自己熟悉的开发工具来编写 Golang 代码。目前社区中比较流行的有：</p>
+<ul>
+<li>Goland: 流行的 Golang IDE, Jetbrains 全家桶系列产品</li>
+<li>Vscode: 巨硬出品的代码编辑器，目前社区中广泛使用</li>
+<li>Neovim/vim: 很多 linux/mac 用户的选择，结合 vim-go 等插件开发</li>
+<li>Emacs/Sublime/Atom 等跨平台编辑器，结合对应的 go 语言插件</li>
+</ul>
+<h1 id="_3">善用工具</h1>
+<p>一个好的编码习惯是打开你的开发工具的 gofmt(格式化代码) 和 goimports(自动 import)，这样写 go
+代码会方便很多，比如保存代码的时候编辑器自动帮助你格式化代码并且引入依赖的包，大大减轻了编写代码的心智负担。
+最好也加上静态检查，比如 golang 有 <a href="https://github.com/golangci/golangci-lint">golangci-lint</a> 工具可以集成到你的编辑器里，(笔者用的 vim neomake)，
+这样编写代码如果有一些小错误开发工具会提示你修正，减少一些在低级代码错误上浪费的时间。</p>
+<h1 id="go">你的第一个 Go 程序</h1>
+<p>首先记得安装 when-changed 或者类似工具，这样写完代码直接保存就可以自动运行你的 golang 代码了，解放双手的好工具。
+笔者会使用 tmux 打开两个窗口，一个窗口编写代码，一个用来运行 go 并且保存代码之后自动运行输出结果。</p>
+<p>在你的 GOPATH 下创建一个文件夹用来编写测试代码。 比如笔者的是 GOPATH 是 <code>$HOME/go</code>，然后进入到 src 里边，
+随便创建一个文件夹比如叫做 expamples，然后编写一个 main.go 就可以了</p>
+<p>好了，让我们来编写和运行第一个 Go 代码吧，打开你的开发工具然后输入以下代码：</p>
+<pre><code class="go">// hello_go.go
+package main
+
+import &quot;fmt&quot;
+
+func main() {
+    fmt.Println(&quot;Hello Golang!&quot;)
+}
+</code></pre>
+
+<p>麻雀虽小五脏俱全，简单看下这段代码都用到了哪些语法特性：</p>
+<ul>
+<li>包的声明 (package main)</li>
+<li>注释, go 和 c++ 一样使用双斜线和 <code>/* 注释 */</code> 分别来注释单行和多行代码</li>
+<li>每个 go 程序都以 main 函数作为入口。定义函数使用 func 开头</li>
+<li>啊哈，注意在 go 代码里，必须把方括号放在函数右边，而且使用 tab 来进行代码缩进。否则编译报错，笔者这里建议大家用 gofmt
+    工具自动格式化代码。go 工程上限制比较严格，直接定死了一些语法争论（比如方括号开口放哪里？用 tab 还是空格）</li>
+<li>每一行代码不用最后加上分号（实际上编译器会给你做这种事）</li>
+<li>调用了内置包 fmt 的函数 Println 来打印输出</li>
+</ul>
+<p>你可以 git clone 这个项目到你的 <code>GOPATH/src</code> 下，然后进入 expamples 里的文件夹，找到 go 文件就可以使用 go run
+运行示例代码。 视频里我会演示编写一个简单的 go 代码并且运行它。</p>
+<h2 id="_4">练习</h2>
+<ul>
+<li>请安装 golang 开发环境和开发工具，你可以选择一个自己擅长的开发工具编写 go 代码</li>
+<li>请编写你的第一个 golang 代码练习输出 hello Go！</li>
+<li>搜索如何用你的开发工具借助 gofmt 来格式化你的代码，这样写代码的时候会减少心智负担，把精力集中在代码逻辑本身</li>
+</ul>
+<p>下一章我们来看一下 go 语言的数据类型。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../01_go_basic_types/basic_types/" class="btn btn-neutral float-right" title="Go 基础类型">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../.." class="btn btn-neutral" title="简介"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../01_go_basic_types/basic_types/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>
